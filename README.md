@@ -13,3 +13,7 @@ This GraphQL API is not itself an official TFL API - the source data is though, 
 ## Continuous Integration
 
 [CircleCI](https://circleci.com/gh/johnboyes/thames-clippers-timetables-api) is the continuous integration build server.
+
+## Continuous Deployment
+
+The app deploys to [Heroku](https://heroku.com), using [Heroku's automatic GitHub deploys](https://devcenter.heroku.com/articles/github-integration#automatic-deploys)
