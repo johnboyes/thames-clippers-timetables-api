@@ -28,6 +28,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # rspec-rails needs to be in the :development group as well as test to expose generators 
+  # and rake tasks without having to type RAILS_ENV=test.
+  gem 'rspec-rails'
 end
 
 group :development do
