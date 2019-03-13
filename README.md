@@ -1,24 +1,9 @@
-# README
+# thames-clippers-timetables-api
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Thames Clippers timetable data in a [GraphQL](https://graphql.org/) API.
 
-Things you may want to cover:
+This GraphQL API is not itself an official TFL API - the source data is though, from [TFL's open data](https://tfl.gov.uk/info-for/open-data-users/) API.
 
-* Ruby version
+## Running the test suite
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`bundle exec rspec`
