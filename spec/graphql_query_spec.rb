@@ -7,7 +7,7 @@ end
 
 RSpec.describe 'graphql', type: :request do
   it 'returns thames clipper sailing times' do
-    execute_graphql_query <<~QUERY
+    request_sailing_times <<~QUERY
       {
         routing(from: WANDSWORTH_RIVERSIDE_QUARTER, to: BLACKFRIARS) {
           from
