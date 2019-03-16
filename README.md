@@ -6,6 +6,15 @@ Thames Clippers timetable data in a [GraphQL](https://graphql.org/) API.
 
 This GraphQL API is not itself an official TFL API - the source data is though, from [TFL's open data](https://tfl.gov.uk/info-for/open-data-users/) API.
 
+## Prerequisites
+
+To retrieve the source timetable data from TFL you need to:
+
+- [Register for a TFL Application ID and Key](https://api.tfl.gov.uk/), if you do not already have one
+- Set the application ID and Key as the following two environment variables:
+  - `TFL_APP_ID`
+  - `TFL_APP_KEY`
+
 ## Running the test suite
 
 `bundle exec rspec`

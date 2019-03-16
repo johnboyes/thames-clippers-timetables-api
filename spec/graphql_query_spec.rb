@@ -9,7 +9,7 @@ RSpec.describe 'graphql', type: :request do
   it 'returns thames clipper sailing times' do
     request_sailing_times <<~QUERY
       {
-        routing(from: WANDSWORTH_RIVERSIDE_QUARTER, to: BLACKFRIARS) {
+        routing(from: WANDSWORTH_RIVERSIDE_QUARTER_PIER, to: BLACKFRIARS_PIER) {
           from
           to
           sailings {
@@ -24,8 +24,8 @@ RSpec.describe 'graphql', type: :request do
       'data' => {
         'routing' =>
           {
-            'from' => 'WANDSWORTH_RIVERSIDE_QUARTER',
-            'to' => 'BLACKFRIARS',
+            'from' => 'WANDSWORTH_RIVERSIDE_QUARTER_PIER',
+            'to' => 'BLACKFRIARS_PIER',
             'sailings' => [
               {
                 'departureTime' => '0710',

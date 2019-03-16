@@ -5,6 +5,12 @@ ruby '2.6.1'
 
 # Use Ruby implementation of GraphQL for the API
 gem 'graphql'
+# Use Nikkou for helper methods on top of Nokogiri
+gem 'nikkou'
+# Use Nokogiri for XML parsing
+gem 'nokogiri'
+# Use RubyZip to extract the TFL xml from their open data zipfile
+gem 'rubyzip'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
 # Use Puma as the app server
@@ -31,6 +37,8 @@ group :development, :test do
   # rspec-rails needs to be in the :development group as well as test to expose generators 
   # and rake tasks without having to type RAILS_ENV=test.
   gem 'rspec-rails'
+  # Use dotenv for environment variables locally
+  gem 'dotenv-rails'
 end
 
 group :development do
