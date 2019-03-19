@@ -12,11 +12,62 @@ class RB6XML
   TIMETABLES_URL = "#{TIMETABLES_BASE_URL}#{TIMETABLES_QUERY_STRING}".freeze
 
   def initialize
+    puts 'parsing xml'
     rb6_filename = download_rb6_xml
     @parsed_xml = Nokogiri::XML(File.open("#{TIMETABLES_DIR}/#{rb6_filename}")).remove_namespaces!
   end
 
-  attr_reader :parsed_xml
+  def vehicle_journeys
+    @parsed_xml.xpath('TransXChange/VehicleJourneys/VehicleJourney')
+  end
+
+  def departure_time(vehicle_journey)
+    vehicle_journey.xpath('DepartureTime').text
+  end
+
+  def timing_links(vehicle_journey)
+    # TODO: should I make this method more efficient?
+    section_id = journey_pattern(vehicle_journey).xpath('JourneyPatternSectionRefs').text
+    sections = @parsed_xml.xpath('TransXChange/JourneyPatternSections/JourneyPatternSection')
+    section = sections.attr_equals('id', section_id)
+    section.xpath('JourneyPatternTimingLink')
+  end
+
+  def duration_in_seconds(timing_link)
+    ActiveSupport::Duration.parse(timing_link.xpath('RunTime').text)
+  end
+
+  def journey_pattern(vehicle_journey)
+    # TODO: should I make this method more efficient?
+    journey_pattern_id = vehicle_journey.xpath('JourneyPatternRef').text
+    @parsed_xml.attr_equals('id', journey_pattern_id)
+  end
+
+  def from(journey_pattern_timing_link)
+    from_or_to(journey_pattern_timing_link, 'From')
+  end
+
+  def to(journey_pattern_timing_link)
+    from_or_to(journey_pattern_timing_link, 'To')
+  end
+
+  def from_or_to(journey_pattern_timing_link, from_or_to)
+    stop_id = journey_pattern_timing_link.xpath("#{from_or_to}/StopPointRef").text
+    pier = piers.xpath('AtcoCode').text_equals(stop_id).first.parent
+    pier_name(pier)
+  end
+
+  def pier_names
+    piers.xpath('Descriptor/CommonName')
+  end
+
+  def piers
+    @parsed_xml.xpath('TransXChange/StopPoints/StopPoint')
+  end
+
+  def pier_name(pier)
+    pier.xpath('Descriptor/CommonName').text
+  end
 
   private
 
