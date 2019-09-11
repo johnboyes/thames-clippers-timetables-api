@@ -7,7 +7,7 @@ require 'open-uri'
 class RB6XML
   TIMETABLES_DIR = "#{Rails.root}/tmp/timetables".freeze
   TIMETABLES_ZIP = 'journey-planner-timetables.zip'.freeze
-  TIMETABLES_BASE_URL = "http://data.tfl.gov.uk/tfl/syndication/feeds/#{TIMETABLES_ZIP}".freeze
+  TIMETABLES_BASE_URL = "http://tfl.gov.uk/tfl/syndication/feeds/#{TIMETABLES_ZIP}".freeze
   TIMETABLES_QUERY_STRING = "?app_id=#{ENV['TFL_APP_ID']}&app_key=#{ENV['TFL_APP_KEY']}".freeze
   TIMETABLES_URL = "#{TIMETABLES_BASE_URL}#{TIMETABLES_QUERY_STRING}".freeze
 

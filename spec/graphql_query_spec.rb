@@ -44,6 +44,7 @@ RSpec.describe 'graphql', type: :request do
               { 'departureTime' => '1927',  'arrivalTime' => '2010' },
               { 'departureTime' => '1947',  'arrivalTime' => '2030' },
               { 'departureTime' => '2007',  'arrivalTime' => '2048' },
+              { 'departureTime' => '0748',  'arrivalTime' => '0824' },
               { 'departureTime' => '2027',  'arrivalTime' => '2110' },
               { 'departureTime' => '2047',  'arrivalTime' => '2127' },
               { 'departureTime' => '2107',  'arrivalTime' => '2150' },
