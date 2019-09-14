@@ -30,7 +30,7 @@ module Timetables
   def sailings(from:, to:)
     all_sailings.each_with_object([]) do |sailing, matched_sailings|
       matched_sailings << sailing_from_to(sailing, from, to) if from_a_to_b? sailing, from, to
-    end
+    end.sort_by(&:departure_time)
   end
 
   def sailing_from_to(sailing, from, to)
