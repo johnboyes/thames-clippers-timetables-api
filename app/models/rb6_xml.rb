@@ -76,7 +76,7 @@ class RB6XML
     FileUtils.rm_rf(Dir["#{TIMETABLES_DIR}/*"])
     download = URI.open(TIMETABLES_URL)
     IO.copy_stream(download, "#{TIMETABLES_DIR}/#{TIMETABLES_ZIP}")
-    river_zip_filename = unzip_file("#{TIMETABLES_DIR}/#{TIMETABLES_ZIP}", TIMETABLES_DIR, 'RIVER')
+    river_zip_filename = unzip_file("#{TIMETABLES_DIR}/#{TIMETABLES_ZIP}", TIMETABLES_DIR, 'CABLE')
     File.delete("#{TIMETABLES_DIR}/#{TIMETABLES_ZIP}")
     rb6_filename = unzip_file("#{TIMETABLES_DIR}/#{river_zip_filename}", TIMETABLES_DIR, 'RB6')
     File.delete("#{TIMETABLES_DIR}/#{river_zip_filename}")
