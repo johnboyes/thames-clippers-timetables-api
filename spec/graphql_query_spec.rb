@@ -31,7 +31,6 @@ RSpec.describe 'graphql', type: :request do
               { 'departureTime' => '0617',  'arrivalTime' => '0700' },
               { 'departureTime' => '0647',  'arrivalTime' => '0730' },
               { 'departureTime' => '0717',  'arrivalTime' => '0800' },
-              { 'departureTime' => '0748',  'arrivalTime' => '0824' },
               { 'departureTime' => '0802',  'arrivalTime' => '0848' },
               { 'departureTime' => '0837',  'arrivalTime' => '0922' },
               { 'departureTime' => '0907',  'arrivalTime' => '0953' },
