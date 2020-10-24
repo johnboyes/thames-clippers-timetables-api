@@ -78,7 +78,7 @@ class RB6XML
     IO.copy_stream(download, "#{TIMETABLES_DIR}/#{TIMETABLES_ZIP}")
     river_zip_filename = unzip_file("#{TIMETABLES_DIR}/#{TIMETABLES_ZIP}", TIMETABLES_DIR, 'CABLE')
     File.delete("#{TIMETABLES_DIR}/#{TIMETABLES_ZIP}")
-    rb6_filename = unzip_file("#{TIMETABLES_DIR}/#{river_zip_filename}", TIMETABLES_DIR, 'RB6')
+    rb6_filename = unzip_file("#{TIMETABLES_DIR}/#{river_zip_filename}", TIMETABLES_DIR, 'B6')
     File.delete("#{TIMETABLES_DIR}/#{river_zip_filename}")
     rb6_filename
   end
