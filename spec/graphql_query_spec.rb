@@ -27,22 +27,22 @@ RSpec.describe 'graphql', type: :request do
             'from' => 'WANDSWORTH_RIVERSIDE_QUARTER_PIER',
             'to' => 'BLACKFRIARS_PIER',
             'sailings' => [
-              { 'departureTime' => '0637',  'arrivalTime' => '0723' },
-              { 'departureTime' => '0707',  'arrivalTime' => '0754' },
-              { 'departureTime' => '0727',  'arrivalTime' => '0813' },
-              { 'departureTime' => '0752',  'arrivalTime' => '0837' },
+              { 'departureTime' => '0637',  'arrivalTime' => '0725' },
+              { 'departureTime' => '0707',  'arrivalTime' => '0755' },
+              { 'departureTime' => '0727',  'arrivalTime' => '0814' },
+              { 'departureTime' => '0747',  'arrivalTime' => '0833' },
               { 'departureTime' => '0807',  'arrivalTime' => '0853' },
               { 'departureTime' => '0832',  'arrivalTime' => '0920' },
-              { 'departureTime' => '0912',  'arrivalTime' => '1005' },
-              { 'departureTime' => '1717',  'arrivalTime' => '1803' },
-              { 'departureTime' => '1752',  'arrivalTime' => '1840' },
-              { 'departureTime' => '1817',  'arrivalTime' => '1904' },
-              { 'departureTime' => '1847',  'arrivalTime' => '1931' },
+              { 'departureTime' => '0912',  'arrivalTime' => '1006' },
+              { 'departureTime' => '1713',  'arrivalTime' => '1804' },
+              { 'departureTime' => '1757',  'arrivalTime' => '1847' },
+              { 'departureTime' => '1822',  'arrivalTime' => '1912' },
+              { 'departureTime' => '1857',  'arrivalTime' => '1946' },
               { 'departureTime' => '1917',  'arrivalTime' => '2004' },
-              { 'departureTime' => '1947',  'arrivalTime' => '2031' },
-              { 'departureTime' => '2020',  'arrivalTime' => '2103' },
-              { 'departureTime' => '2038',  'arrivalTime' => '2126' },
-              { 'departureTime' => '2110',  'arrivalTime' => '2153' }
+              { 'departureTime' => '1952',  'arrivalTime' => '2039' },
+              { 'departureTime' => '2023',  'arrivalTime' => '2107' },
+              { 'departureTime' => '2053',  'arrivalTime' => '2143' },
+              { 'departureTime' => '2118',  'arrivalTime' => '2202' }
             ]
           }
       }
